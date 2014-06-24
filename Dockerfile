@@ -1,6 +1,6 @@
-# redis on trusty
+# redis and supervisord on trusty
 
-FROM markusma/base:trusty
+FROM markusma/supervisord:trusty
 MAINTAINER Markus Mattinen <docker@gamma.fi>
 
 RUN add-apt-repository ppa:chris-lea/redis-server
@@ -11,6 +11,6 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD config/etc/redis/redis.conf /etc/redis/redis.conf
+ADD config/etc/supervisor/conf.d/redis.conf /etc/supervisor/conf.d/redis.conf
 
 EXPOSE 6379
-CMD ["/usr/bin/redis-server", "/etc/redis/redis.conf"]
