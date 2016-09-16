@@ -1,6 +1,6 @@
-# redis and supervisord on trusty
+# Redis and supervisord on Ubuntu Trusty
 
-FROM markusma/supervisord:trusty
+FROM markusma/supervisord:ubuntu-trusty
 MAINTAINER Markus Mattinen <docker@gamma.fi>
 
 RUN add-apt-repository ppa:chris-lea/redis-server \
