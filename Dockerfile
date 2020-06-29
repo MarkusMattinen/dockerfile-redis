@@ -1,6 +1,6 @@
-# Redis on Ubuntu Trusty
+# Redis on Ubuntu Bionic
 
-FROM markusma/ubuntu:trusty
+FROM markusma/ubuntu:bionic
 
 RUN add-apt-repository ppa:chris-lea/redis-server \
  && apt-get update \
